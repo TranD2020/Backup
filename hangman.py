@@ -48,7 +48,7 @@ frameList = [
        ==='''
 ]
 
-myWord = ["beautiful"]
+myWord = "beautiful"
 myList = list(myWord)
 print(myList)
 secret = []
