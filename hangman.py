@@ -48,8 +48,7 @@ frameList = [
        ==='''
 ]
 
-myWord = ["beautiful", "apples", "ninjas", "pirates", "car"]
-
+myWord = ["beautiful"]
 myList = list(myWord)
 print(myList)
 secret = []
@@ -61,7 +60,8 @@ print(secret)
 while misses < 7:
 	print(frameList[misses])
 	guess = input("Guess a letter: ")
-	if guess in myWord:
+	if guess in myList:
 		print("That letter is in the secret word")
 	else:
 		misses += 1
+
