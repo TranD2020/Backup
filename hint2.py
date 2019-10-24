@@ -1,15 +1,15 @@
-# how to keep track of misses
-secret = "christmas"
-misses = 0
-secret = list(secret)
+# how to turn string into a list
+myString = "arizona"
+myList = list(myString)
+print(myList)
+secret = []
+# how to create a list with _ in place of letters
+for a in myList:
+	secret.append(" _ ")
 
-hangList = ['''pic 1''', ''' pic 2''',''' pic 3 ''', ''' pic 4''','''pic 5''','''pic6''', '''pic7''']
+print(secret)
 
-while misses < 7:
-	print(hangList[misses])
-	guess = input("Guess a letter: ")
-	if guess in secret:
-		#loop through secret and find all matching letters
-		print("That letter is in the secret word")
-	else:
-		misses = misses + 1
+# how to replace an _ with a letter 
+
+secret[2] = "i"
+print(secret)
