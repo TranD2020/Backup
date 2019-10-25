@@ -65,7 +65,7 @@ while misses < 7:
 		print("That letter is in the word")
 	else:
 		misses += 1
-
+   print(guessList)
 index = 0
 for letter in mystery:
   if letter == guess:
