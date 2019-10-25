@@ -1,7 +1,6 @@
 import time
 import random 
 
-misses = 0
 frameList = [
 '''
     +---+
@@ -48,20 +47,30 @@ frameList = [
        ==='''
 ]
 
+choice = input("Type a word: ")
 myWord = "beautiful"
-myList = list(myWord)
-print(myList)
-secret = []
+guessList = list("_________")
 
-for a in myList:
-	secret.append(" _ ")
-print(secret)
+if choice == myWord:
+  print("It's a match")
+else:
+  print("Not a match")
+
+misses = 0
 
 while misses < 7:
 	print(frameList[misses])
 	guess = input("Guess a letter: ")
-	if guess in myList:
-		print("That letter is in the secret word")
+	if guess in guessList:
+		print("That letter is in the word")
 	else:
 		misses += 1
+
+index = 0
+for letter in mystery:
+  if letter == guess:
+    guessList[index] = guess 
+  index += 1
+
+print(guessList)
 
