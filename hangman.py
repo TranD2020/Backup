@@ -49,28 +49,29 @@ frameList = [
 
 choice = input("Type a word: ")
 myWord = "beautiful"
-guessList = list("_________")
+myList = list(myWord)
+secret = []
 
-if choice == myWord:
-  print("It's a match")
-else:
-  print("Not a match")
+for word in myList:
+  secret.append("_")
 
-misses = 0
+while True:
+  if choice == myWord:
+    print("It's a correct match. You won!!")
+    break
+  else:
+    print("Not a match")
+    pass
+    misses = 0
+    while misses < 7:
+      print(frameList[misses])
+      guess = input("Guess a letter: ")
+      if guess in myList:
+        print("That letter is in the word")
+        print(myList)
+      else:
+        misses += 1
+        if misses == 7: 
+          print("Game Over. Please try again.")
 
-while misses < 7:
-	print(frameList[misses])
-	guess = input("Guess a letter: ")
-	if guess in guessList:
-		print("That letter is in the word")
-	else:
-		misses += 1
-   print(guessList)
-index = 0
-for letter in mystery:
-  if letter == guess:
-    guessList[index] = guess 
-  index += 1
-
-print(guessList)
-
+print(myList)
