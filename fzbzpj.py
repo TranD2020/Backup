@@ -1,10 +1,9 @@
-count = 0
-while count < 100:
-	count += 1
-	print(count)
+count = 1
+while count <= 100:
+	print(count, end="")
 	if count % 3==0:
-		print(str(count) + " Fizz")
+		print("Fizz ", end="")
 	if count % 5==0:
-		print(str(count) + " Buzz")
-	if count % 3 and 5==0:
-		print(str(count) + " Fizz" + " Buzz")
+		print("Buzz", end="")
+	print("")
+	count += 1
