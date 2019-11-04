@@ -8,16 +8,12 @@ dimes = 0
 nickels = 0
 pennies = 0
 
-price = float(input("What is the price? "))
-given = float(input("What is the given amount? "))
+price = float(input("What is the price? $"))
+given = float(input("What is the given amount? $"))
 change = given - price
 print("Change: " + str(change))
 
-halfDollars += dollars * 2
-quarters += halfDollars * 2
-dimes += quarters * 2.5
-nickels += dimes * 2
-pennies += nickels * 5
+pennies = change * 100
 
 
 dollars = int(pennies / 100)
@@ -33,11 +29,11 @@ dimes = int(pennies / 10)
 pennies = pennies % 10 
 
 nickels = int(pennies / 5)
-pennies = pennies % 5
+pennies = int(pennies % 5)
 
-print("Dollars: " + dollars)
-print("Half-Dollars: " + halfDollars)
-print("Quarters: " + quarters)
-print("Dimes: " + dimes)
-print("Nickels: " + nickels)
-print("Pennies: " + pennies)
+print("Dollars: " + str(dollars))
+print("Half-Dollars: " + str(halfDollars))
+print("Quarters: " + str(quarters))
+print("Dimes: " + str(dimes))
+print("Nickels: " + str(nickels))
+print("Pennies: " + str(pennies))
